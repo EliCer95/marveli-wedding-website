@@ -46,7 +46,7 @@ li.nav-item {
   display: inline-block;
   margin-left: 10vw;
   letter-spacing: 0.3vw;
-  animation: nav-load 900ms ease-in-out;
+  animation: nav-load 2s ease-in-out;
 }
 
 a {
@@ -67,7 +67,7 @@ a:hover {
 
 .flex-item {
   text-align: center;
-  font-size: 1.3vw;
+  font-size: 23px;
   animation: header-load 3s ease-in-out;
 }
 
@@ -90,9 +90,26 @@ a:hover {
 
 @keyframes nav-load {
   0% {
-    transform: translateX(1000%);
+    transform: translateX(2000%);
   }
   100% {
     transform: translateY(0%);
+  }
+}
+
+@media (max-width: 1000px) {
+  header img {
+    bottom: 500px;
+    width: 80.43478vw;
+  }
+
+  .nav-links {
+    top: 40rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .flex-item {
+    font-size: 16px;
   }
 }
