@@ -4,7 +4,6 @@ body {
 }
 
 main {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,18 +12,28 @@ main {
 }
 
 header {
-  height: 200vh;
+  height: 120vh;
 }
 
-header:before {
-  background-color: #2e4036;
-  animation: slide-up 900ms;
-}
 header img {
   position: absolute;
   right: 0;
+  top: 10.86957vh;
+  width: 80.43478vw;
+  z-index: -1;
+}
+
+section {
+  position: relative;
+  height: 200vh;
+}
+
+section img {
+  position: absolute;
+  left: 0;
   bottom: 20.86957vh;
   width: 80.43478vw;
+  z-index: -1;
 }
 
 h1 {
@@ -38,6 +47,13 @@ h1 {
   animation: header-load 3s ease-in-out;
 }
 
+h4 {
+  position: absolute;
+  bottom: 4vw;
+  right: 5vw;
+  font-size: 1.5rem;
+  animation: scroll-load 3s ease-out;
+}
 ul {
   list-style: none;
 }
@@ -79,6 +95,37 @@ a:hover {
   transform-origin: 0 0;
 }
 
+.line {
+  border-bottom: 3px solid rgb(4, 66, 4);
+  width: 50px;
+}
+
+.date-info {
+  position: absolute;
+  top: 3vw;
+  left: 41.66667vw;
+}
+
+.rsvp-info {
+  position: absolute;
+  top: 20.11111vw;
+  left: 62.5vw;
+  max-width: 200px;
+}
+
+.venue-info {
+  position: absolute;
+  top: 40.11111vw;
+  left: 32.5vw;
+  max-width: 200px;
+}
+
+.dresscode-info {
+  position: absolute;
+  top: 60.11111vw;
+  right: 12.5vw;
+  max-width: 200px;
+}
 @keyframes header-load {
   0% {
     opacity: 0%;
@@ -97,12 +144,25 @@ a:hover {
   }
 }
 
+@keyframes scroll-load {
+  0% {
+    transform: translateY(800%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 @media (max-width: 1000px) {
   header img {
     bottom: 500px;
     width: 80.43478vw;
   }
 
+  h1 {
+    top: 30vw;
+  }
   .nav-links {
     top: 40rem;
   }
