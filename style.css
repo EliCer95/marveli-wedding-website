@@ -1,25 +1,52 @@
 body {
-  background: url("./images/background.png") no-repeat, #68775a !important;
-  background-size: cover !important;
+  background-color: #f3f2f1;
+  color: #2e4036;
+}
+
+header img {
+  width: 130.43478vh;
+  position: absolute;
+  right: 0;
+  bottom: 20.86957vh;
 }
 
 h1 {
-  font-size: 128px;
-  text-align: center;
-  font-family: fantasy;
-  color: #f8ede2;
+  position: absolute;
+  z-index: 1;
+  top: 40.21739vh;
+  left: 30.55556vw;
+  font-size: 7.77778vw;
+  line-height: 7.77778vw;
+  letter-spacing: -0.30556vw;
 }
 
-h3 {
+ul {
+  list-style: none;
+}
+
+li.nav-item {
+  display: inline-block;
+  margin-left: 10vw;
+  letter-spacing: 0.3vw;
+}
+
+a {
+  color: #2e4036;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.flex-item {
   text-align: center;
 }
-.header-description-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-.header-description {
-  font-family: sans-serif;
-  color: #f8ede2;
-  text-align: center;
-  line-height: 1.5rem;
+
+.nav-links {
+  position: absolute;
+  left: 3.38889vw;
+  bottom: 4vw;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
 }
