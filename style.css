@@ -1,7 +1,25 @@
-h1 {
-  text-align: center;
+body {
+  background: url("./images/background.png") no-repeat, #68775a !important;
+  background-size: cover !important;
 }
 
-h2 {
+h1 {
+  font-size: 128px;
   text-align: center;
+  font-family: fantasy;
+  color: #f8ede2;
+}
+
+h3 {
+  text-align: center;
+}
+.header-description-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.header-description {
+  font-family: sans-serif;
+  color: #f8ede2;
+  text-align: center;
+  line-height: 1.5rem;
 }
