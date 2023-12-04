@@ -11,7 +11,13 @@
       <div class="header-bg">
         <img src="./images/bg2.png" />
       </div>
-      <h2 class="rsvp-title">Please, fill out this form before May 1st!</h2>
+      <h2 class="rsvp-title">
+        Please, fill out this form before May 1st!<br /><small
+          class="rsvp-subtitle"
+          >(you can fill it out only once per household)</small
+        >
+      </h2>
+
       <div class="flex-container">
         <div class="flex-item home-link">
           <a href="./index.html">E<br />/<br />M</a>
@@ -50,18 +56,19 @@
               </select>
             </li>
             <li>
-              <label for="extras">Are you bringing anyone else with you? </label
-              ><br />
-              <input type="text" /><br />
-              <label
-                ><small>
-                  If yes, please, fill out the form for that person as
-                  well.</small
-                ></label
-              >
+              <select>
+                <option value="">Who is coming with you?</option>
+                <option value="yes">Noone</option>
+                <option value="maybe">My +1</option>
+                <option value="no">Kid(s)</option>
+                <option value="no">My +1 and kid(s)</option>
+              </select>
             </li>
             <li>
-              <label for="msg">Message:</label><br />
+              <label for="msg"
+                >Anything else we should know? <br />(names and alergies/diet of
+                the extras)</label
+              ><br />
               <textarea name="invitee_msg"></textarea>
             </li>
             <li class="submit">
