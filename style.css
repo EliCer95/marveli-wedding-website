@@ -156,6 +156,11 @@ form select {
   opacity: 0;
 }
 
+.down-arrow h4 {
+  animation: fade-slide-up 1s 0.5s ease-out forwards;
+  opacity: 0;
+}
+
 .nav-links {
   position: absolute;
   left: 3.38889vw;
@@ -203,6 +208,10 @@ form select {
   display: flex;
   justify-content: center;
   margin-top: 5vw;
+}
+
+a .back-home {
+  text-align: center;
 }
 
 @keyframes header-load {
