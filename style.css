@@ -47,6 +47,7 @@ h1 {
 
 h2 {
   font-size: 46px;
+  text-align: center;
 }
 
 h3.message {
@@ -62,6 +63,7 @@ footer {
   margin: 20px auto;
   text-align: center;
 }
+
 li.nav-item {
   display: inline-block;
   margin-left: 10vw;
@@ -72,11 +74,52 @@ li.nav-item {
 a {
   color: #2e4036;
   text-decoration: none;
-  transition: all 200ms ease-in-out;
 }
 
-a:hover {
-  font-size: larger;
+button {
+  border-radius: 20px;
+  border: none;
+  padding: 15px 20px;
+  background-color: #2e4036;
+  color: #f3f2f1;
+  transform: all 200ms ease-in-out;
+}
+
+button:hover {
+  background-color: #f3f2f1;
+  color: #2e4036;
+  border: 1px solid #2e4036;
+}
+
+form li {
+  margin: 20px;
+}
+
+form input {
+  min-width: 300px;
+  min-height: 40px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.064);
+  background-color: #2e403631;
+}
+
+form textarea {
+  min-width: 300px;
+  min-height: 80px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.064);
+  background-color: #2e403631;
+}
+
+form select {
+  min-width: 300px;
+  min-height: 40px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.064);
+  background-color: #2e403631;
 }
 
 .bg-2 img {
@@ -149,19 +192,17 @@ a:hover {
   padding-right: 5vw;
 }
 
-.rsvp-button {
-  border-radius: 20px;
-  border: none;
-  padding: 15px 20px;
-  background-color: #2e4036;
-  color: #f3f2f1;
-  transform: all 200ms ease-in-out;
+.rsvp-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8vw;
 }
 
-.rsvp-button:hover {
-  background-color: #f3f2f1;
-  color: #2e4036;
-  border: 1px solid #2e4036;
+.invitee-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vw;
 }
 
 @keyframes header-load {
@@ -239,7 +280,7 @@ a:hover {
   }
 
   h2 {
-    font-variation-settings: 36px;
+    font-size: 36px;
   }
 }
 

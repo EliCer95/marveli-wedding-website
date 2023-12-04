@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSVP page</title>
+    <link href="/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="header-bg">
+        <img src="./images/bg2.png" />
+      </div>
+      <h2 class="rsvp-title">Please, fill out this form before May 1st!</h2>
+      <div class="flex-container">
+        <div class="flex-item home-link">
+          <a href="./index.html">E<br />/<br />M</a>
+        </div>
+        <div class="flex-item">29<br />/<br />06</div>
+      </div>
+      <div class="navbar">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="#">INFO</a></li>
+          <li class="nav-item"><a href="#">RSVP</a></li>
+        </ul>
+      </div>
+      <div class="invitee-form">
+        <form>
+          <ul>
+            <li>
+              <label for="name">Your full name:</label><br /><input
+                type="text"
+                name="invitee_name"
+              />
+            </li>
+            <li>
+              <label for="email">Your email adress:</label><br />
+              <input type="email" name="invitee_email" />
+            </li>
+            <li>
+              <label for="diet">Diet/allergies:</label><br />
+              <input type="diet" name="invitee_diet" />
+            </li>
+            <li>
+              <select>
+                <option value="">Are you coming?</option>
+                <option value="yes">Yes!</option>
+                <option value="maybe">Not sure yet</option>
+                <option value="no">No..</option>
+              </select>
+            </li>
+            <li>
+              <label for="msg">Message:</label><br />
+              <textarea name="invitee_msg"></textarea>
+            </li>
+            <li class="submit">
+              <button type="submit">Submit</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </header>
+    <footer>©2023 Eliska Cerna</footer>
+  </body>
+</html>
