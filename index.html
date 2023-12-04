@@ -29,44 +29,62 @@
     </header>
     <main>
       <section>
-        <img src="./images/bg4.png" alt="background image" />
-        <div class="date-info">
-          <h3>THE DATE</h3>
-          <div class="line"></div>
-          <h2>
-            Saturday<br />
-            29th of June <br />
-            2024
-          </h2>
+        <div class="bg-2">
+          <img src="./images/bg4.png" alt="background image" />
         </div>
-        <div class="rsvp-info">
-          <h3>THE INVITE</h3>
-          <div class="line"></div>
-          <p>
-            Please, kindly let us know if you will be joining us for our wedding
-            celebration and if you are brining your +1
-          </p>
-          <a href="#">RSVP</a>
-        </div>
-        <div class="venue-info">
-          <h3>THE VENUE</h3>
-          <div class="line"></div>
-          <p>
-            The venue is in Slovakia with the followign address: Pohanske, Myto
-            Pod dumbierom, slovensko.
-          </p>
-        </div>
-        <div class="dresscode-info">
-          <h3>THE DRESSCODE</h3>
-          <div class="line"></div>
-          <p>
-            Since this wedding will take place in the mountains and the pure
-            nature of Slovakia, we recommend wearing osmething comfortable in
-            natural colors or with natural prints or patterns. The theme of the
-            wedding is boho chic.
-          </p>
+        <div class="grid-container">
+          <div class="info-wrapper">
+            <h3>THE DATE</h3>
+            <div class="line"></div>
+            <h2>
+              Saturday<br />
+              29th of June <br />
+              2024
+            </h2>
+          </div>
+          <div class="info-wrapper"></div>
+          <div class="info-wrapper"></div>
+          <div class="info-wrapper">
+            <h3>THE INVITE</h3>
+            <div class="line"></div>
+            <p>
+              Please, kindly let us know if you will be joining us for our
+              wedding celebration and if you are brining your +1
+            </p>
+            <a href="#"> <button class="rsvp-button">RSVP</button></a>
+          </div>
+          <div class="info-wrapper">
+            <h3>THE VENUE</h3>
+            <div class="line"></div>
+            <p>
+              The venue is in Slovakia with the followign address: Pohanske,
+              Myto Pod dumbierom, slovensko.
+            </p>
+          </div>
+          <div class="info-wrapper"></div>
+          <div class="info-wrapper"></div>
+          <div class="info-wrapper">
+            <h3>THE DRESSCODE</h3>
+            <div class="line"></div>
+            <p>
+              Since this wedding will take place in the mountains and the pure
+              nature of Slovakia, we recommend wearing osmething comfortable in
+              natural colors or with natural prints or patterns. The theme of
+              the wedding is boho chic.
+            </p>
+          </div>
         </div>
       </section>
+      <h3 class="message">We can't wait to celebrate with you!</h3>
     </main>
+    <footer>©2023 Eliska Cerna</footer>
+    <script>
+      document.body.className += "js-loading";
+      window.addEventListener("load", showPage, false);
+
+      function showPage() {
+        document.body.className = document.body.className.replace("js-loading");
+      }
+    </script>
   </body>
 </html>
