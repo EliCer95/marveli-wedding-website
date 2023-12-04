@@ -46,7 +46,7 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 46px;
 }
 
 h3.message {
@@ -237,15 +237,19 @@ a:hover {
   h3.message {
     font-size: 60px;
   }
+
+  h2 {
+    font-variation-settings: 36px;
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .flex-item {
     font-size: 16px;
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 24px;
   }
   h3.message {
     font-size: 40px;
