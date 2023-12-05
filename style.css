@@ -17,6 +17,10 @@ main {
 
 header {
   position: relative;
+  height: max-content;
+}
+
+.homepage-header {
   height: 100vh;
 }
 
@@ -58,11 +62,13 @@ h3.message {
 ul {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 footer {
   margin: 0 auto;
   text-align: center;
+  bottom: 0;
 }
 
 li.nav-item {
@@ -129,12 +135,13 @@ button:hover {
 }
 
 form {
+  margin-top: 5rem;
   animation: slide-right 2.5s 0.2s ease-in-out forwards;
   opacity: 0;
 }
 
 form li {
-  margin: 20px;
+  margin: 1.5rem;
 }
 
 form input {
@@ -254,11 +261,32 @@ form select {
 .invitee-form {
   display: flex;
   justify-content: center;
-  margin-top: 5vw;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .rsvp-subtitle {
   font-size: 20px;
+}
+
+.travel-info-wrapper {
+  margin-bottom: 3rem;
+  animation: fade-slide-up 2s 1s ease-in-out forwards;
+  opacity: 0;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.accommodation-info-wrapper {
+  animation: fade-slide-up 2s 2.5s ease-in-out forwards;
+  opacity: 0;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.hotel-list {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 @keyframes header-load {
