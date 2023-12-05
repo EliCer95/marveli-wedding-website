@@ -52,7 +52,7 @@ h2 {
 
 h3.message {
   text-align: center;
-  font-size: 80px;
+  font-size: 60px;
 }
 
 ul {
@@ -61,7 +61,7 @@ ul {
 }
 
 footer {
-  margin: 20px auto;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -73,10 +73,41 @@ li.nav-item {
 }
 
 a {
+  text-decoration: none;
   color: #2e4036;
+  position: relative;
+}
+a.nav-link {
+  text-decoration: none;
+  line-height: 1.5rem;
+}
+
+a.nav-link::after {
+  color: #2e4036;
+  border-bottom: 0.18em solid #2e4036;
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  left: 0;
+  transition: right 0.4s ease-out;
+}
+a:hover {
   text-decoration: none;
 }
 
+a.nav-link:hover::after {
+  right: 0;
+}
+
+.rsvp-button-link {
+  border-radius: 20px;
+  border: none;
+  padding: 15px 20px;
+  background-color: #2e4036;
+  color: #f3f2f1;
+  transition: all 200ms ease-in-out;
+}
 button {
   border-radius: 20px;
   border: none;
@@ -86,10 +117,20 @@ button {
   transform: all 200ms ease-in-out;
 }
 
+.rsvp-button-link:hover {
+  background-color: #f3f2f1;
+  color: #2e4036;
+  border: 1px solid #2e4036;
+}
 button:hover {
   background-color: #f3f2f1;
   color: #2e4036;
   border: 1px solid #2e4036;
+}
+
+form {
+  animation: slide-right 2.5s 0.2s ease-in-out forwards;
+  opacity: 0;
 }
 
 form li {
@@ -98,7 +139,7 @@ form li {
 
 form input {
   min-width: 300px;
-  min-height: 40px;
+  min-height: 30px;
   border-radius: 10px;
   border: none;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.064);
@@ -187,6 +228,7 @@ form select {
 .info-wrapper {
   text-align: center;
   margin: 2vw auto;
+  z-index: 10;
   max-width: 600px;
 }
 
@@ -206,16 +248,13 @@ form select {
   top: 8vw;
   margin-bottom: 0;
   line-height: 1.8rem;
+  animation: header-load 3s ease-in-out;
 }
 
 .invitee-form {
   display: flex;
   justify-content: center;
   margin-top: 5vw;
-}
-
-a .back-home {
-  text-align: center;
 }
 
 .rsvp-subtitle {
@@ -257,6 +296,17 @@ a .back-home {
     transform: translateY(4rem);
   }
 
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
   100% {
     opacity: 1;
     transform: none;

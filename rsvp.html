@@ -26,8 +26,12 @@
       </div>
       <div class="navbar">
         <ul class="nav-links">
-          <li class="nav-item"><a href="#">INFO</a></li>
-          <li class="nav-item"><a href="#">RSVP</a></li>
+          <li class="nav-item">
+            <a href="./info.html" class="nav-link">INFO</a>
+          </li>
+          <li class="nav-item">
+            <a href="./rsvp.html" class="nav-link">RSVP</a>
+          </li>
         </ul>
       </div>
       <div class="invitee-form">
@@ -79,5 +83,13 @@
       </div>
     </header>
     <footer>©2023 Eliska Cerna</footer>
+    <script>
+      document.body.className += "js-loading";
+      window.addEventListener("load", showPage, false);
+
+      function showPage() {
+        document.body.className = document.body.className.replace("js-loading");
+      }
+    </script>
   </body>
 </html>
