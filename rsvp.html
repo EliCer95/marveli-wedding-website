@@ -35,11 +35,7 @@
         </ul>
       </div>
       <div class="invitee-form">
-        <form
-          action="https://script.google.com/macros/s/AKfycby67bdQBR5sm2kpDcxb4cDjYda_5EqFQdXrShg8BJLuIIJnDBJNWVUA-luWQtH0TVSH/exec"
-          method="post"
-          id="inviteeForm"
-        >
+        <form id="inviteeForm">
           <ul>
             <li>
               <label for="name">Your full name:</label><br /><input
@@ -58,7 +54,7 @@
               <input type="text" name="diet" id="diet" />
             </li>
             <li>
-              <select id="response">
+              <select id="response" name="response">
                 <option value="">Are you coming?</option>
                 <option value="yes">Yes!</option>
                 <option value="maybe">Not sure yet</option>
@@ -66,7 +62,7 @@
               </select>
             </li>
             <li>
-              <select id="extras">
+              <select id="extras" name="extras">
                 <option value="">Who is coming with you?</option>
                 <option value="yes">Noone</option>
                 <option value="maybe">My +1</option>
@@ -102,12 +98,36 @@
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        let full_name = document.getElementById("name").value;
-        let email = document.getElementById("email").value;
-        let diet = document.getElementById("diet").value;
-        let response = document.getElementById("response").value;
-        let extras = document.getElementById("extras").value;
-        let message = document.getElementById("msg").value;
+        const formData = new FormData(event.target);
+
+        const jsonData = {};
+        formData.forEach((value, key) => {
+          jsonData[key] = value;
+        });
+
+        fetch(
+          "https://script.google.com/macros/s/AKfycbxLQ_z2RFlAVHzg2tyZy1XhrxuP2vF_XmKUjm6pj8__8jywywH5THjEIMTopVkBFeKU/exec",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(jsonData),
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success", data);
+          })
+          .catch((error) => {
+            console.error("Error", error);
+          });
+        // let full_name = document.getElementById("name").value;
+        // let email = document.getElementById("email").value;
+        // let diet = document.getElementById("diet").value;
+        // let response = document.getElementById("response").value;
+        // let extras = document.getElementById("extras").value;
+        // let message = document.getElementById("msg").value;
       });
     </script>
   </body>
