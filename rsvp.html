@@ -35,24 +35,26 @@
         </ul>
       </div>
       <div class="invitee-form">
-        <form>
+        <form action="" method="post" id="inviteeForm">
           <ul>
             <li>
               <label for="name">Your full name:</label><br /><input
                 type="text"
-                name="invitee_name"
+                name="name"
+                id="name"
+                required
               />
             </li>
             <li>
               <label for="email">Your email adress:</label><br />
-              <input type="email" name="invitee_email" />
+              <input type="email" name="email" id="email" />
             </li>
             <li>
               <label for="diet">Diet/allergies:</label><br />
-              <input type="diet" name="invitee_diet" />
+              <input type="text" name="diet" id="diet" />
             </li>
             <li>
-              <select>
+              <select id="response">
                 <option value="">Are you coming?</option>
                 <option value="yes">Yes!</option>
                 <option value="maybe">Not sure yet</option>
@@ -60,7 +62,7 @@
               </select>
             </li>
             <li>
-              <select>
+              <select id="extras">
                 <option value="">Who is coming with you?</option>
                 <option value="yes">Noone</option>
                 <option value="maybe">My +1</option>
@@ -73,7 +75,7 @@
                 >Anything else we should know? <br />(names and alergies/diet of
                 the extras)</label
               ><br />
-              <textarea name="invitee_msg"></textarea>
+              <textarea name="msg" id="msg"></textarea>
             </li>
             <li class="submit">
               <button type="submit">Submit</button>
@@ -83,6 +85,7 @@
       </div>
     </header>
     <footer>©2023 Eliska Cerna</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
       document.body.className += "js-loading";
       window.addEventListener("load", showPage, false);
@@ -90,6 +93,25 @@
       function showPage() {
         document.body.className = document.body.className.replace("js-loading");
       }
+
+      const form = document.getElementById("inviteeForm");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let full_name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let diet = document.getElementById("diet").value;
+        let response = document.getElementById("response").value;
+        let extras = document.getElementById("extras").value;
+        let message = document.getElementById("msg").value;
+
+        localStorage.setItem("ls_full_name", full_name);
+        localStorage.setItem("ls_email", email);
+        localStorage.setItem("ls_diet", diet);
+        localStorage.setItem("ls_response", response);
+        localStorage.setItem("ls_extras", extras);
+        localStorage.setItem("ls_msg", msg);
+      });
     </script>
   </body>
 </html>
