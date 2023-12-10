@@ -35,7 +35,11 @@
         </ul>
       </div>
       <div class="invitee-form">
-        <form action="" method="post" id="inviteeForm">
+        <form
+          action="https://script.google.com/macros/s/AKfycby67bdQBR5sm2kpDcxb4cDjYda_5EqFQdXrShg8BJLuIIJnDBJNWVUA-luWQtH0TVSH/exec"
+          method="post"
+          id="inviteeForm"
+        >
           <ul>
             <li>
               <label for="name">Your full name:</label><br /><input
@@ -104,13 +108,6 @@
         let response = document.getElementById("response").value;
         let extras = document.getElementById("extras").value;
         let message = document.getElementById("msg").value;
-
-        localStorage.setItem("ls_full_name", full_name);
-        localStorage.setItem("ls_email", email);
-        localStorage.setItem("ls_diet", diet);
-        localStorage.setItem("ls_response", response);
-        localStorage.setItem("ls_extras", extras);
-        localStorage.setItem("ls_msg", msg);
       });
     </script>
   </body>
