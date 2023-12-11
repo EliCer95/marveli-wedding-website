@@ -3,96 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E&M Homepage</title>
-    <link href="/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header class="homepage-header">
-      <div class="header-bg">
-        <img src="./images/bg2.png" />
-      </div>
-      <h1>Eli & Marvin</h1>
-      <div class="flex-container">
-        <div class="flex-item">
-          <a href="./index.html">E<br />/<br />M</a>
-        </div>
-        <div class="flex-item">29<br />/<br />06</div>
-      </div>
-      <div class="navbar">
-        <ul class="nav-links">
-          <li class="nav-item">
-            <a href="./info.html" class="nav-link">INFO</a>
-          </li>
-          <li class="nav-item">
-            <a href="./rsvp.html" class="nav-link">RSVP</a>
-          </li>
-        </ul>
-      </div>
-      <div class="down-arrow">
-        <h4>Scroll down</h4>
-        <img src="./images/down_arrow.png" width="50" />
-      </div>
-    </header>
-    <main>
-      <section>
-        <div class="bg-2">
-          <img src="./images/bg4.png" alt="background image" />
-        </div>
-        <div class="grid-container">
-          <div class="info-wrapper">
-            <h3>THE DATE</h3>
-            <div class="line"></div>
-            <h2>
-              Saturday<br />
-              29th of June <br />
-              2024
-            </h2>
-          </div>
-          <div class="info-wrapper"></div>
-          <div class="info-wrapper"></div>
-          <div class="info-wrapper">
-            <h3>THE INVITE</h3>
-            <div class="line"></div>
-            <br />
-            <p>
-              Please, kindly let us know if you will be joining us for our
-              wedding celebration and if you are brining your +1
-            </p>
-            <br />
-            <a href="./rsvp.html" class="rsvp-button-link">RSVP</a>
-          </div>
-          <div class="info-wrapper">
-            <h3>THE VENUE</h3>
-            <div class="line"></div>
-            <p>
-              The venue is in Slovakia with the following address: <br />Mýto
-              pod Ďumbierom 2378 (street name) <br />976 44 Mýto pod Ďumbierom
-              (village name) <br />Slovakia
-            </p>
-          </div>
-          <div class="info-wrapper"></div>
-          <div class="info-wrapper"></div>
-          <div class="info-wrapper">
-            <h3>THE DRESSCODE</h3>
-            <div class="line"></div>
-            <p>
-              Since this wedding will take place in the mountains and the pure
-              nature of Slovakia, we recommend wearing osmething comfortable in
-              natural colors or with natural prints or patterns. The theme of
-              the wedding is boho chic.
-            </p>
-          </div>
-        </div>
-      </section>
-      <h3 class="message">We can't wait to celebrate with you!</h3>
-    </main>
-    <footer>©2023 Eliska Cerna</footer>
-    <script>
-      document.body.className += "js-loading";
-      window.addEventListener("load", showPage, false);
+    <title>Language Selection</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #f4f4f4;
+      }
 
-      function showPage() {
-        document.body.className = document.body.className.replace("js-loading");
+      #language-container {
+        margin-top: 100px;
+      }
+
+      select {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="language-container">
+      <label for="language">Choose your language:</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="cz">Česky</option>
+
+        <!-- Add more language options as needed -->
+      </select>
+      <br /><br />
+      <button onclick="changeLanguage()">Continue</button>
+    </div>
+
+    <script>
+      function changeLanguage() {
+        var selectedLanguage = document.getElementById("language").value;
+        window.location.href = "homepage-" + selectedLanguage + ".html";
       }
     </script>
   </body>
