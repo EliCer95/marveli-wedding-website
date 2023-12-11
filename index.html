@@ -6,49 +6,83 @@
     <title>Language Selection</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
+        background-color: #2e4036;
+        color: #f3f2f1;
         margin: 0;
         padding: 0;
         text-align: center;
-        background-color: #f4f4f4;
+      }
+
+      h1 {
+        top: 15vw;
+        font-size: 7.77778vw;
+        line-height: 7.77778vw;
+        letter-spacing: -0.30556vw;
+        animation: header-load 3s ease-in-out;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 0;
+        padding: 0;
+        animation: fade-slide-up 2s 2s ease-in-out forwards;
+        opacity: 0;
+      }
+
+      a {
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+      }
+
+      a:hover {
+        font-size: smaller;
       }
 
       #language-container {
-        margin-top: 100px;
+        margin: 100px auto;
+        max-width: 80%;
+      
       }
 
-      select {
-        padding: 10px;
-        font-size: 16px;
+      .flag {
+        font-size: 5vw;
       }
 
-      button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
+      @keyframes header-load {
+        0% {
+          opacity: 0%;
+        }
+        100% {
+          opacity: 100%;
+        }
+      }
+
+      @keyframes fade-slide-up {
+        0% {
+          opacity: 0;
+          transform: translateY(4rem);
+        }
+
+        100% {
+          opacity: 1;
+          transform: none;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div id="language-container">
-      <label for="language">Choose your language:</label>
-      <select id="language">
-        <option value="en">English</option>
-        <option value="fr">Français</option>
-        <option value="cz">Česky</option>
-
-        <!-- Add more language options as needed -->
-      </select>
-      <br /><br />
-      <button onclick="changeLanguage()">Continue</button>
+     <h1>
+        Welcome<br />Bienvenue<br />
+        Vítejte
+      </h1>
+      <div id="language-container"></div>
+      <ul id="language" class="language-list">
+        <li value="en" class="flag"><a href="homepage-en.html">🇬🇧</a></li>
+        <li value="fr" class="flag"><a href="homepage-fr.html">🇫🇷</a></li>
+        <li value="cz" class="flag"><a href="homepage-cz.html">🇨🇿</a></li>
+      </ul>
     </div>
-
-    <script>
-      function changeLanguage() {
-        var selectedLanguage = document.getElementById("language").value;
-        window.location.href = "homepage-" + selectedLanguage + ".html";
-      }
-    </script>
   </body>
 </html>

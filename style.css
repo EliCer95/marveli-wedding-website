@@ -121,6 +121,7 @@ button {
   background-color: #2e4036;
   color: #f3f2f1;
   transform: all 200ms ease-in-out;
+  cursor: pointer;
 }
 
 .rsvp-button-link:hover {
