@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page d'info</title>
+    <link href="/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="header-bg">
+        <img src="./images/bg2.png" />
+      </div>
+      <h2 class="rsvp-title">Information utile</h2>
+      <div class="flex-container">
+        <div class="flex-item">
+          <a href="./homepage-fr.html">E<br />/<br />M</a>
+        </div>
+        <div class="flex-item">29<br />/<br />06</div>
+      </div>
+      <div class="navbar">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="./info-fr.html" class="nav-link">INFO</a>
+          </li>
+          <li class="nav-item">
+            <a href="./rsvp-fr.html" class="nav-link">RSVP</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="travel-info-wrapper">
+        <div class="info-wrapper">
+          <h3>1. Comment y arriver</h3>
+          <h4>En avion</h4>
+          <p>
+            L'aéroport le plus proche est l'aéroport de Bratislava, mais il est
+            également possible d'atterrir à Budapest ou à Vienne. De là, vous
+            pouvez soit louer une voiture (option préférée), soit prendre un
+            train/bus pour Brezno. Il y a un FlixBus partant de Bratislava,
+            Vienne ou Budapest à destination de Banska Bystrica. Vous pouvez
+            ensuite prendre un bus local pour Brezno.
+          </p>
+        </div>
+        <div class="info-wrapper">
+          <h4>En bus/train</h4>
+          <p>
+            Vous pouvez prendre un bus (FlixBus) ou un train pour Banska
+            Bystrica depuis toutes les grandes villes alentour, puis un bus
+            local pour Brezno.
+          </p>
+        </div>
+        <div class="info-wrapper">
+          <h3>
+            S'il vous plaît, faites-nous part de vos plans et nous vous aiderons
+            à rejoindre votre hébergement une fois que vous connaîtrez votre
+            heure d'arrivée exacte à Brezno.
+          </h3>
+        </div>
+      </div>
+      <div class="accommodation-info-wrapper">
+        <div class="info-wrapper">
+          <h3>2. Hébergement</h3>
+          <ul>
+            <li class="hotel-list">
+              Horská Vilenka <br />www.horskavilenka.sk
+            </li>
+            <div class="line"></div>
+            <li class="hotel-list">Chata Zinka<br />www.chatazinka.sk</li>
+            <div class="line"></div>
+            <li class="hotel-list">Hotel Partizán <br />www.partizan.sk</li>
+            <div class="line"></div>
+            <li class="hotel-list">Penzión Adika <br />www.penzionadika.sk</li>
+            <div class="line"></div>
+            <li class="hotel-list">Hotel Stupka <br />www.hotelytale.sk</li>
+            <div class="line"></div>
+            <li class="hotel-list">penzion rojas <br />www.rojas.sk</li>
+            <div class="line"></div>
+            <li class="hotel-list">zruby bystrá <br />www.zrubybystra.sk</li>
+            <div class="line"></div>
+            <li class="hotel-list">Apartmány Pinus <br />www.pinus.sk</li>
+            <div class="line"></div>
+            <li class="hotel-list">Hotel Myto <br />Only phone contact</li>
+          </ul>
+          <br />
+          <h3>
+            Nous vous suggérons de réserver votre chambre dès que possible car
+            c'est une zone très touristique.
+          </h3>
+        </div>
+      </div>
+    </main>
+    <footer>©2023 Eliska Cerna</footer>
+    <script>
+      document.body.className += "js-loading";
+      window.addEventListener("load", showPage, false);
+
+      function showPage() {
+        document.body.className = document.body.className.replace("js-loading");
+      }
+    </script>
+  </body>
+</html>
