@@ -35,7 +35,12 @@
         </ul>
       </div>
       <div class="invitee-form">
-        <form id="inviteeForm">
+        <form
+          name="inviteeForm"
+          method="POST"
+          action="/pages/success"
+          data-netlify="true"
+        >
           <ul>
             <li>
               <label for="name">Your full name:</label><br /><input
@@ -85,7 +90,7 @@
       </div>
     </header>
     <footer>©2023 Eliska Cerna</footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <script>
       document.body.className += "js-loading";
       window.addEventListener("load", showPage, false);
@@ -93,42 +98,6 @@
       function showPage() {
         document.body.className = document.body.className.replace("js-loading");
       }
-
-      const form = document.getElementById("inviteeForm");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(event.target);
-
-        const jsonData = {};
-        formData.forEach((value, key) => {
-          jsonData[key] = value;
-        });
-
-        fetch(
-          "https://script.google.com/macros/s/AKfycbxLQ_z2RFlAVHzg2tyZy1XhrxuP2vF_XmKUjm6pj8__8jywywH5THjEIMTopVkBFeKU/exec",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(jsonData),
-          }
-        )
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Success", data);
-          })
-          .catch((error) => {
-            console.error("Error", error);
-          });
-        // let full_name = document.getElementById("name").value;
-        // let email = document.getElementById("email").value;
-        // let diet = document.getElementById("diet").value;
-        // let response = document.getElementById("response").value;
-        // let extras = document.getElementById("extras").value;
-        // let message = document.getElementById("msg").value;
-      });
     </script>
   </body>
 </html>
