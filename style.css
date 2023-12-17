@@ -255,7 +255,7 @@ form select {
   right: 0;
   top: 8vw;
   margin-bottom: 0;
-  line-height: 1.8rem;
+  line-height: 1em;
   animation: header-load 3s ease-in-out;
 }
 
@@ -378,6 +378,10 @@ form select {
   h2 {
     font-size: 36px;
   }
+
+  .rsvp-title {
+    top: 18vw;
+  }
 }
 
 @media (max-width: 600px) {
@@ -390,5 +394,13 @@ form select {
   }
   h3.message {
     font-size: 40px;
+  }
+
+  .rsvp-title {
+    top: 20vw;
+  }
+
+  form {
+    max-width: 70%;
   }
 }
