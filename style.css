@@ -379,9 +379,13 @@ form select {
     font-size: 36px;
   }
 
+  /* h3.info-sub-title {
+    top: 50vw;
+  }
+
   .rsvp-title {
     top: 18vw;
-  }
+  } */
 }
 
 @media (max-width: 600px) {
@@ -396,9 +400,13 @@ form select {
     font-size: 40px;
   }
 
+  /* h3.info-sub-title {
+    top: 50vw;
+  }
+
   .rsvp-title {
     top: 20vw;
-  }
+  } */
 
   form {
     max-width: 70%;
